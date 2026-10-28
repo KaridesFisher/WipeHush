@@ -1,4 +1,4 @@
-> **Experimental software.** Provided AS IS under the MIT License, without warranties and with liability limited to the extent permitted by applicable law. Not affiliated with, sponsored by, endorsed by, or approved by Apple Inc. Read the [legal notices](https://github.com/KaridesFisher/CleanMac/blob/main/LEGAL.md) before evaluating the app. These notices do not override mandatory law or guarantee immunity from claims.
+> **Experimental software.** Provided AS IS under the MIT License, without warranties and with liability limited to the extent permitted by applicable law. Not affiliated with, sponsored by, endorsed by, or approved by Apple Inc. Read the [legal notices](https://github.com/KaridesFisher/WipeHush/blob/main/LEGAL.md) before evaluating the app. These notices do not override mandatory law or guarantee immunity from claims.
 
 A free, native cleaning mode for macOS 13+.
 
@@ -11,8 +11,8 @@ A free, native cleaning mode for macOS 13+.
 
 ## Install
 
-Download **CleanMac.zip**, unzip it, move **CleanMac.app** to Applications, and grant Accessibility permission from the app.
+Download **WipeHush.zip**, unzip it, move **WipeHush.app** to Applications, and grant Accessibility permission from the app.
 
 **This app is ad-hoc signed, not Apple-notarized.** macOS may block first launch. Review the source and follow the README's first-launch instructions if you trust the project.
 
-Use a dry microfiber cloth. Your Mac remains powered on. Power / Touch ID cannot be blocked. See the README for limitations, troubleshooting, and source-build instructions.
+Use a dry microfiber cloth. Your computer remains powered on. Power / Touch ID cannot be blocked. See the README for limitations, troubleshooting, and source-build instructions.

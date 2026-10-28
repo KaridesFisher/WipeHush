@@ -2,7 +2,7 @@
 
 ## Experimental project
 
-CleanMac is an independent, experimental, community-maintained software project shared for learning and evaluation. It has not been validated for every hardware configuration, operating-system version, or use case. No promise of uninterrupted operation, fitness for a particular purpose, ongoing maintenance, or technical support is made.
+WipeHush is an independent, experimental, community-maintained software project shared for learning and evaluation. It has not been validated for every hardware configuration, operating-system version, or use case. No promise of uninterrupted operation, fitness for a particular purpose, ongoing maintenance, or technical support is made.
 
 The app temporarily intercepts input and displays black windows while the computer stays powered on. It does not physically disconnect power, disable the Power / Touch ID button, or make wet cleaning safe. Save your work before testing, use a dry cloth, and follow the hardware manufacturer's cleaning instructions. Do not use it where a failure or delayed recovery could cause injury or significant loss.
 
@@ -22,7 +22,7 @@ This notice does not revoke permissions already granted under MIT and does not c
 
 ## Independence and third-party trademarks
 
-CleanMac is not affiliated with, sponsored by, endorsed by, authorized by, or approved by Apple Inc. It is not an Apple product. The distributed app is not signed with an Apple Developer ID or notarized by Apple.
+WipeHush is not affiliated with, sponsored by, endorsed by, authorized by, or approved by Apple Inc. It is not an Apple product. The distributed app is not signed with an Apple Developer ID or notarized by Apple.
 
 Apple, Mac, macOS, MacBook, and Touch ID are trademarks of Apple Inc., registered in the U.S. and other countries and regions. They are referenced to identify the platform and hardware features discussed in the documentation. All other third-party trademarks belong to their respective owners. No challenge to any owner's trademark rights is intended.
 

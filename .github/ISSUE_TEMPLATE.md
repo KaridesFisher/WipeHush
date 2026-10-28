@@ -10,7 +10,7 @@
 
 ## Environment
 
-- CleanMac version:
+- WipeHush version:
 - macOS version:
 - Mac model / chip:
 - External keyboard, pointer, or displays:

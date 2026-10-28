@@ -16,7 +16,7 @@ jobs:
         run: bash scripts/build.sh
       - uses: actions/upload-artifact@v4
         with:
-          name: CleanMac-universal
+          name: WipeHush-universal
           path: |
-            dist/CleanMac.zip
+            dist/WipeHush.zip
             dist/SHA256SUMS.txt

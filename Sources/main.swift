@@ -63,9 +63,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let menu = NSMenu()
         let root = NSMenuItem()
         let appMenu = NSMenu()
-        appMenu.addItem(withTitle: "About CleanMac", action: #selector(about), keyEquivalent: "")
+        appMenu.addItem(withTitle: "About WipeHush", action: #selector(about), keyEquivalent: "")
         appMenu.addItem(.separator())
-        appMenu.addItem(withTitle: "Quit CleanMac", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+        appMenu.addItem(withTitle: "Quit WipeHush", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         root.submenu = appMenu
         menu.addItem(root)
         NSApp.mainMenu = menu
@@ -73,16 +73,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc private func about() {
         NSApp.orderFrontStandardAboutPanel(options: [
-            .applicationName: "CleanMac",
-            .applicationVersion: "1.2.0",
-            .version: "3",
-            .credits: NSAttributedString(string: "A little pause for a cleaner Mac.\nFree and open source under the MIT License.\nCreated by KaridesFisher.")
+            .applicationName: "WipeHush",
+            .applicationVersion: "1.3.0",
+            .version: "4",
+            .credits: NSAttributedString(string: "A little pause for a cleaner workspace.\nFree and open source under the MIT License.\nCreated by KaridesFisher.")
         ])
     }
 
     private func buildWindow() {
         window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 620, height: 660), styleMask: [.titled, .closable, .miniaturizable], backing: .buffered, defer: false)
-        window.title = "CleanMac"
+        window.title = "WipeHush"
         window.titlebarAppearsTransparent = true
         window.backgroundColor = NSColor(calibratedWhite: 0.065, alpha: 1)
         window.isReleasedWhenClosed = false
@@ -103,15 +103,15 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let brand = NSStackView()
         brand.orientation = .horizontal
         brand.spacing = 12
-        let symbol = NSImageView(image: NSImage(systemSymbolName: "sparkles.rectangle.stack", accessibilityDescription: "CleanMac") ?? NSImage())
+        let symbol = NSImageView(image: NSImage(systemSymbolName: "sparkles.rectangle.stack", accessibilityDescription: "WipeHush") ?? NSImage())
         symbol.contentTintColor = accent
         symbol.symbolConfiguration = NSImage.SymbolConfiguration(pointSize: 25, weight: .medium)
         symbol.widthAnchor.constraint(equalToConstant: 38).isActive = true
         symbol.heightAnchor.constraint(equalToConstant: 38).isActive = true
         brand.addArrangedSubview(symbol)
-        brand.addArrangedSubview(text("CLEANMAC", size: 12, weight: .bold, color: accent))
+        brand.addArrangedSubview(text("WIPEHUSH", size: 12, weight: .bold, color: accent))
         stack.addArrangedSubview(brand)
-        stack.addArrangedSubview(text("A little pause.\nA cleaner Mac.", size: 39, weight: .bold))
+        stack.addArrangedSubview(text("A little pause.\nA cleaner workspace.", size: 33, weight: .bold))
         stack.addArrangedSubview(text("Block accidental keystrokes and trackpad input while you wipe. A black screen makes smudges easier to spot.", size: 15, color: muted))
 
         let card = Card()
@@ -164,7 +164,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         stack.addArrangedSubview(startButton)
         startButton.widthAnchor.constraint(equalTo: stack.widthAnchor).isActive = true
         startButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
-        stack.addArrangedSubview(text("Use a dry microfiber cloth. Your Mac stays on. Power / Touch ID is not blocked; avoid holding it down.", size: 12, color: muted))
+        stack.addArrangedSubview(text("Use a dry microfiber cloth. Your computer stays on. Power / Touch ID is not blocked; avoid holding it down.", size: 12, color: muted))
         let footer = text("FREE & OPEN SOURCE  /  NO ACCOUNT  /  NO TRACKING", size: 10, weight: .medium, color: NSColor(white: 0.42, alpha: 1))
         stack.addArrangedSubview(footer)
         footer.bottomAnchor.constraint(lessThanOrEqualTo: content.bottomAnchor, constant: -20).isActive = true
@@ -204,12 +204,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             }
             return app.session.isActive ? nil : Unmanaged.passUnretained(event)
         }, userInfo: context) else {
-            showError("Could not block input", detail: "Enable CleanMac in System Settings > Privacy & Security > Accessibility, then quit and reopen the app. After updating the app, you may need to remove its old permission entry and add it again.")
+            showError("Could not block input", detail: "Enable WipeHush in System Settings > Privacy & Security > Accessibility, then quit and reopen the app. After updating the app, you may need to remove its old permission entry and add it again.")
             return
         }
         guard let newSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, newTap, 0) else {
             CFMachPortInvalidate(newTap)
-            showError("Could not start cleaning", detail: "The input event source could not be created. Please quit and reopen CleanMac.")
+            showError("Could not start cleaning", detail: "The input event source could not be created. Please quit and reopen WipeHush.")
             return
         }
         tap = newTap

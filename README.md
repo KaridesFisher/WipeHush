@@ -1,8 +1,8 @@
 <div align="center">
 
-# CleanMac
+# WipeHush
 
-### A little pause. A cleaner Mac.
+### A little pause. A cleaner workspace.
 
 A free, experimental, open-source cleaning mode for macOS.\
 Block accidental input. Make smudges easier to spot. Get back to work.
@@ -10,19 +10,19 @@ Block accidental input. Make smudges easier to spot. Get back to work.
 [![macOS](https://img.shields.io/badge/macOS-13%2B-111111)](#requirements)
 [![Swift](https://img.shields.io/badge/Swift-Native_AppKit-F05138?logo=swift&logoColor=white)](#build-from-source)
 [![License](https://img.shields.io/badge/License-MIT-8AEFC2)](LICENSE)
-[![Build](https://github.com/KaridesFisher/CleanMac/actions/workflows/build.yml/badge.svg)](https://github.com/KaridesFisher/CleanMac/actions/workflows/build.yml)
+[![Build](https://github.com/KaridesFisher/WipeHush/actions/workflows/build.yml/badge.svg)](https://github.com/KaridesFisher/WipeHush/actions/workflows/build.yml)
 
-**[Download](https://github.com/KaridesFisher/CleanMac/releases/latest)** · **[Get started](#getting-started)** · **[Report a bug](https://github.com/KaridesFisher/CleanMac/issues/new)**
+**[Download](https://github.com/KaridesFisher/WipeHush/releases/latest)** · **[Get started](#getting-started)** · **[Report a bug](https://github.com/KaridesFisher/WipeHush/issues/new)**
 
-<img src="docs/preview.png" alt="CleanMac's English interface with Accessibility status, session duration, and Start Cleaning button" width="620">
+<img src="docs/preview.jpg" alt="WipeHush's English interface with Accessibility status, session duration, and Start Cleaning button" width="620">
 
 </div>
 
 > **Experimental software — use at your own risk.** Provided AS IS under the [MIT License](LICENSE), without warranties and with liability limited as permitted by applicable law. This independent project is not affiliated with, endorsed by, or approved by Apple Inc. See [LEGAL.md](LEGAL.md) for limitations, ownership, and trademark notices. A disclaimer cannot override mandatory law or guarantee immunity from legal claims.
 
-## Why CleanMac?
+## Why WipeHush?
 
-Wiping a MacBook keyboard can type random characters or trigger shortcuts. Shutting down may not solve it: a key press can turn the Mac back on. CleanMac gives you a short, deliberate cleaning break while your Mac stays awake.
+Wiping a MacBook keyboard can type random characters or trigger shortcuts. Shutting down may not solve it: a key press can turn the Mac back on. WipeHush gives you a short, deliberate cleaning break while your Mac stays awake.
 
 It temporarily blocks keyboard, mouse, and trackpad events and covers connected displays with black windows. Hold **Esc for 2 seconds** to restore input, or let the session expire automatically.
 
@@ -36,7 +36,7 @@ It temporarily blocks keyboard, mouse, and trackpad events and covers connected 
 | Native and lightweight | Swift + AppKit. No web runtime, package dependencies, account, or subscription. |
 | Private by design | No analytics, ads, network requests, or keystroke logging. |
 
-> **CleanMac is a physical cleaning helper, not a storage cleaner or security lock.** Your Mac stays powered on. The displays are covered in black; the hardware is not switched off.
+> **WipeHush is a physical cleaning helper, not a storage cleaner or security lock.** Your computer stays powered on. The displays are covered in black; the hardware is not switched off.
 
 ## Requirements
 
@@ -48,9 +48,9 @@ Universal compilation is checked during builds. Hardware behavior still needs te
 
 ## Getting started
 
-1. Download **CleanMac.zip** from [Releases](https://github.com/KaridesFisher/CleanMac/releases/latest).
-2. Unzip it and move **CleanMac.app** into **Applications** before granting permissions.
-3. Open CleanMac. Click **Grant Access**, then enable CleanMac under **System Settings → Privacy & Security → Accessibility**.
+1. Download **WipeHush.zip** from [Releases](https://github.com/KaridesFisher/WipeHush/releases/latest).
+2. Unzip it and move **WipeHush.app** into **Applications** before granting permissions.
+3. Open WipeHush. Click **Grant Access**, then enable WipeHush under **System Settings → Privacy & Security → Accessibility**.
 4. Return to the app, choose your session length, and click **Start Cleaning**.
 5. Wipe gently with a **dry microfiber cloth**.
 6. Hold **Esc continuously for 2 seconds** to unlock. You can also wait for the countdown to finish.
@@ -61,14 +61,14 @@ The published app is ad-hoc signed, **not signed with an Apple Developer ID or n
 
 ### Updating from an earlier version
 
-Quit CleanMac before replacing the app. Version 1.2 uses the bundle identifier `io.github.karidesfisher.cleanmac`. Older personal builds used `local.cleanmac.cleaner`; remove their obsolete Accessibility entries and grant access to the new app. Rebuilding or replacing an ad-hoc signed app can also require removing and re-adding its permission entry.
+Quit the previous app before installing WipeHush. This release uses the bundle identifier `io.github.karidesfisher.wipehush`. Remove obsolete Accessibility entries for earlier builds, then grant access to WipeHush in Applications. Rebuilding or replacing an ad-hoc signed app can also require removing and re-adding its permission entry.
 
 ## Important limitations
 
 - **Power / Touch ID is not blocked.** Avoid holding the power button down.
 - Some macOS-reserved shortcuts and security dialogs can bypass input interception. This is not a substitute for locking your session.
-- Black windows do not turn off display backlights or the computer. CleanMac does not change screen brightness or keyboard lighting.
-- Accessibility restrictions or Secure Input in another app may prevent expected input interception. If the input tap is disabled, CleanMac ends the session instead of trying to keep it locked.
+- Black windows do not turn off display backlights or the computer. WipeHush does not change screen brightness or keyboard lighting.
+- Accessibility restrictions or Secure Input in another app may prevent expected input interception. If the input tap is disabled, WipeHush ends the session instead of trying to keep it locked.
 - Sleep, user-session changes, or display reconfiguration end an active session. A running, responsive app also auto-unlocks at the selected deadline; an app or OS hang can delay timers. Force Quit remains a fallback if macOS permits it.
 - Use a dry cloth while the Mac is on. For damp cleaning, shut down and disconnect power instead. See [Apple's cleaning guidance](https://support.apple.com/en-us/103258).
 
@@ -78,7 +78,7 @@ Quit CleanMac before replacing the app. Version 1.2 uses the bundle identifier `
 Enable Accessibility access. The app refreshes permission status every second. Quit and reopen it if the status does not update.
 
 **Input blocking cannot start after an update**  
-Remove the previous CleanMac entry from Accessibility, add the current app from Applications, enable it, and restart the app.
+Remove the previous WipeHush entry from Accessibility, add the current app from Applications, enable it, and restart the app.
 
 **Esc does not unlock**  
 Hold Esc without releasing it for the full two seconds. A progress percentage should appear. If it does not, wait for the selected timeout (at most two minutes). Include your Mac model, macOS version, and whether the progress appeared when filing an issue.
@@ -88,17 +88,17 @@ Hold Esc without releasing it for the full two seconds. A progress percentage sh
 Install Apple's Command Line Tools (or Xcode), then:
 
 ```sh
-git clone https://github.com/KaridesFisher/CleanMac.git
-cd CleanMac
+git clone https://github.com/KaridesFisher/WipeHush.git
+cd WipeHush
 bash scripts/test.sh
 bash scripts/build.sh
-open dist/CleanMac.zip
+open dist/WipeHush.zip
 ```
 
 The build script compiles **arm64 and x86_64** for macOS 13+, merges them into one universal app, ad-hoc signs it, verifies the signature, and creates:
 
 ```text
-dist/CleanMac.zip
+dist/WipeHush.zip
 dist/SHA256SUMS.txt
 ```
 
@@ -108,7 +108,7 @@ To verify a downloaded archive, place the release's checksum file next to it and
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-`CLEANMAC_OUTPUT_DIR` and `CLEANMAC_MODULE_CACHE` can override the output and compiler cache directories. Builds need no third-party packages or network connection once Apple's tools are installed.
+`WIPEHUSH_OUTPUT_DIR` and `WIPEHUSH_MODULE_CACHE` can override the output and compiler cache directories. Builds need no third-party packages or network connection once Apple's tools are installed.
 
 ## How it works
 

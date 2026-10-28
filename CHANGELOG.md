@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.0
+
+- Renamed the project and application to WipeHush.
+- Updated the app bundle identifier, interface, documentation, build scripts, release names, and preview image.
+- Included the MIT License and experimental-use legal notices in application packages.
+- Existing Accessibility permission must be granted again for the new app identity.
+
+
 ## 1.2.0
 
 - First public open-source release under the MIT License.
