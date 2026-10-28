@@ -4,10 +4,10 @@
 
 ### A little pause. A cleaner Mac.
 
-A free, open-source cleaning mode for macOS.\
+A free, experimental, open-source cleaning mode for macOS.\
 Block accidental input. Make smudges easier to spot. Get back to work.
 
-[![macOS](https://img.shields.io/badge/macOS-13%2B-111111?logo=apple&logoColor=white)](#requirements)
+[![macOS](https://img.shields.io/badge/macOS-13%2B-111111)](#requirements)
 [![Swift](https://img.shields.io/badge/Swift-Native_AppKit-F05138?logo=swift&logoColor=white)](#build-from-source)
 [![License](https://img.shields.io/badge/License-MIT-8AEFC2)](LICENSE)
 [![Build](https://github.com/KaridesFisher/CleanMac/actions/workflows/build.yml/badge.svg)](https://github.com/KaridesFisher/CleanMac/actions/workflows/build.yml)
@@ -17,6 +17,8 @@ Block accidental input. Make smudges easier to spot. Get back to work.
 <img src="docs/preview.png" alt="CleanMac's English interface with Accessibility status, session duration, and Start Cleaning button" width="620">
 
 </div>
+
+> **Experimental software — use at your own risk.** Provided AS IS under the [MIT License](LICENSE), without warranties and with liability limited as permitted by applicable law. This independent project is not affiliated with, endorsed by, or approved by Apple Inc. See [LEGAL.md](LEGAL.md) for limitations, ownership, and trademark notices. A disclaimer cannot override mandatory law or guarantee immunity from legal claims.
 
 ## Why CleanMac?
 
@@ -132,3 +134,5 @@ Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the workfl
 ## License
 
 [MIT](LICENSE) © 2026 [KaridesFisher](https://github.com/KaridesFisher).
+
+Copyright ownership is retained; users receive the permissions granted by MIT. See [LEGAL.md](LEGAL.md) for the experimental-use notice, warranty and liability limitations, and third-party trademark attribution.

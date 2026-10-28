@@ -1,3 +1,5 @@
+> **Experimental software.** Provided AS IS under the MIT License, without warranties and with liability limited to the extent permitted by applicable law. Not affiliated with, sponsored by, endorsed by, or approved by Apple Inc. Read the [legal notices](https://github.com/KaridesFisher/CleanMac/blob/main/LEGAL.md) before evaluating the app. These notices do not override mandatory law or guarantee immunity from claims.
+
 A free, native cleaning mode for macOS 13+.
 
 - English interface with live Accessibility status.
