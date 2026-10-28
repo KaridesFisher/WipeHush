@@ -1,0 +1,36 @@
+import Foundation
+
+func check(_ condition: @autoclosure () -> Bool, _ name: String) {
+    guard condition() else { fatalError("FAIL: \(name)") }
+    print("PASS: \(name)")
+}
+
+var session = CleaningSession()
+check(!session.isActive, "starts inactive")
+check(!session.shouldStop(now: 999), "inactive sessions do not stop")
+session.escapeKey(isDown: true, now: 0)
+check(session.escapeProgress(now: 10) == 0, "inactive Escape events are ignored")
+session.start(duration: 120, now: 10)
+check(session.remainingSeconds(now: 10) == 120, "session duration")
+session.escapeKey(isDown: true, now: 11)
+check(!session.shouldStop(now: 12.99), "holding Esc less than two seconds does not unlock")
+session.escapeKey(isDown: true, now: 12)
+check(session.shouldStop(now: 13), "autorepeat does not reset the two-second hold")
+session.escapeKey(isDown: false, now: 13)
+check(session.escapeProgress(now: 14) == 0, "releasing Esc resets progress")
+session.escapeKey(isDown: true, now: 14)
+check(!session.shouldStop(now: 15.99), "a second hold starts from zero")
+check(session.shouldStop(now: 16), "a second complete hold unlocks")
+session.stop()
+check(!session.isActive && session.remainingSeconds(now: 100) == 0, "stop clears session state")
+session.start(duration: 30, now: 100)
+check(!session.shouldStop(now: 129.99), "session remains active before deadline")
+check(session.shouldStop(now: 130), "automatic unlock at deadline")
+session.start(duration: 999, now: 200)
+check(session.remainingSeconds(now: 200) == 120, "duration is capped at two minutes")
+session.start(duration: -1, now: 300)
+check(session.remainingSeconds(now: 300) == 1, "invalid duration has a bounded fallback")
+session.escapeKey(isDown: true, now: 300)
+session.start(duration: 60, now: 301)
+check(session.escapeProgress(now: 305) == 0, "new session clears previous hold")
+print("All session tests passed.")
